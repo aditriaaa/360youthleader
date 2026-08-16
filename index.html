@@ -629,7 +629,7 @@ function renderCards(mode){
       <div class="feat-desc">${description}</div>
       <div class="topics-header">${topicsHeader}</div>
       <div class="topics-list">${pills}</div>`;
-    c.addEventListener('click',()=>{ highlightCard(card.id); });
+    c.addEventListener('click',()=>{ window.location.href = card.id + '.html'; });
     c.style.cursor='pointer';
     grid.appendChild(c);
   });
