@@ -148,7 +148,22 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;background:#fafaff;
 .journey-legend-dot{width:14px;height:14px;border-radius:50%;display:inline-block;} 
 .journey-svg{display:block;width:100%;height:auto;border-radius:18px;box-shadow:0 8px 32px rgba(40,30,120,0.10);background:#fafaff;} 
 
-.differentiators h2{font-size:30px;font-weight:800;color:#1a0a5e;text-align:center;margin-bottom:12px;letter-spacing:-0.5px;} 
+.expert-perspective{max-width:900px;margin:64px auto 0;padding:0 24px;}
+.expert-perspective-inner{position:relative;background:linear-gradient(135deg,#1a0a5e 0%,#3a1d8a 55%,#5a2db0 100%);border-radius:22px;padding:48px 44px 38px;color:#fff;overflow:hidden;box-shadow:0 24px 60px rgba(26,10,94,0.28);}
+.expert-perspective-inner::before{content:'';position:absolute;top:-90px;right:-70px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,215,0,0.20),transparent 70%);pointer-events:none;}
+.expert-perspective-inner::after{content:'';position:absolute;bottom:-100px;left:-80px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,0.28),transparent 70%);pointer-events:none;}
+.expert-tag{position:relative;display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#FFD700;background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.35);padding:7px 16px;border-radius:20px;margin-bottom:22px;}
+.expert-quote-mark{position:relative;font-family:'Marcellus',serif;font-size:72px;line-height:0.4;color:rgba(255,215,0,0.5);margin-bottom:10px;}
+.expert-quote{position:relative;font-family:'Marcellus',serif;font-size:25px;line-height:1.5;color:#fff;font-weight:400;letter-spacing:-0.2px;margin-bottom:20px;max-width:760px;}
+.expert-attribution{position:relative;font-size:14px;color:rgba(255,255,255,0.72);margin-bottom:30px;letter-spacing:0.1px;}
+.expert-attribution strong{color:#fff;font-weight:800;}
+.expert-response{position:relative;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-left:4px solid #FFD700;border-radius:14px;padding:22px 26px;}
+.expert-response-label{font-size:11px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#FFD700;margin-bottom:10px;}
+.expert-response-text{font-size:14.5px;line-height:1.75;color:rgba(255,255,255,0.92);}
+.expert-response-text em{font-style:italic;font-weight:700;color:#FFD700;}
+.expert-source{position:relative;font-size:11px;color:rgba(255,255,255,0.42);margin-top:20px;text-align:right;font-style:italic;letter-spacing:0.2px;}
+
+.differentiators h2{font-size:30px;font-weight:800;color:#1a0a5e;text-align:center;margin-bottom:12px;letter-spacing:-0.5px;}
 .differentiators .sub3{text-align:center;color:#6a6890;font-size:15px;margin-bottom:36px;} 
 .diff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;} 
 .diff-card{background:#fff;border-radius:18px;padding:24px 26px;box-shadow:0 4px 20px rgba(40,30,120,0.07);border:1.5px solid #ecebfa;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;} 
@@ -169,7 +184,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;background:#fafaff;
 
 .footer-pilot-badge{display:inline-block;background:rgba(255,215,0,0.15);color:#FFD700;font-size:11px;font-weight:800;letter-spacing:2px;padding:6px 16px;border-radius:20px;margin-bottom:20px;border:1px solid rgba(255,215,0,0.4);} 
 .footer-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:24px;} 
-.cta-secondary{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.4);padding:14px 32px;border-radius:30px;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;} 
+.cta-secondary{display:inline-block;text-decoration:none;background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.4);padding:14px 32px;border-radius:30px;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;}
 .cta-secondary:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.7);} 
 
 .wheel-tooltip{position:fixed;background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 12px 40px rgba(40,30,120,0.22);border:1.5px solid #ecebfa;pointer-events:none;z-index:1000;opacity:0;transform:translateY(6px);transition:opacity .18s, transform .18s;max-width:280px;font-family:'Inter',sans-serif;} 
@@ -198,10 +213,10 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;background:#fafaff;
   <div class="brand">The 360° Youth Leader</div>
   <div class="nav-links">
     <a class="nav-link" href="index.html">Home</a>
-    <a class="nav-link" href="#differentiators">About</a>
-    <a class="nav-link" href="#journey-section">Journey</a>
-    <a class="nav-link" href="#contact">Contact</a>
-    <a class="nav-link" href="#features">Sign Up</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link" href="journey.html">Journey</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+    <a class="nav-link" href="signup.html">Sign Up</a>
   </div>
 </div>
 
@@ -346,15 +361,15 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;background:#fafaff;
 
   <div class="journey-legend">
     <div class="journey-legend-item">
-      <span class="journey-legend-dot" style="background:#1a0a5e;border:2px solid #FFD700;"></span>
+      <span class="journey-legend-dot" style="background:#FFD700;border:2px solid #1a0a5e;"></span>
       <span>INNER MASTERY · Gita Warriors</span>
     </div>
     <div class="journey-legend-item">
-      <span class="journey-legend-dot" style="background:#1a0a5e;border:2px solid #FFD700;"></span>
+      <span class="journey-legend-dot" style="background:linear-gradient(135deg,#7c3aed,#e8407a);border:2px solid #fff;box-shadow:0 0 0 1px #d8d0f0;"></span>
       <span>LEADERSHIP MASTERY · Applied</span>
     </div>
     <div class="journey-legend-item">
-      <span class="journey-legend-dot" style="background:#fff;border:2px solid #5a3d8a;"></span>
+      <span class="journey-legend-dot" style="background:#00897B;border:2px solid #fff;box-shadow:0 0 0 1px #cfe8e3;"></span>
       <span>OTHER LIFE SKILLS</span>
     </div>
   </div>
@@ -362,13 +377,79 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;background:#fafaff;
   <svg viewBox="0 0 880 1100" class="journey-svg" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="jSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff5f7"/><stop offset="50%" stop-color="#fdeef2"/><stop offset="100%" stop-color="#f5e8f8"/></linearGradient>
-      <linearGradient id="jZ1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#A04FCC" stop-opacity="0.10"/><stop offset="100%" stop-color="#A04FCC" stop-opacity="0.03"/></linearGradient>
-      <linearGradient id="jZ2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#26C6DA" stop-opacity="0.10"/><stop offset="100%" stop-color="#26C6DA" stop-opacity="0.03"/></linearGradient>
-      <linearGradient id="jZ3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FF7043" stop-opacity="0.12"/><stop offset="100%" stop-color="#FF7043" stop-opacity="0.03"/></linearGradient>
-      <radialGradient id="jSun" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FFE066" stop-opacity="0.9"/><stop offset="60%" stop-color="#FFD700" stop-opacity="0.4"/><stop offset="100%" stop-color="#FFD700" stop-opacity="0"/></radialGradient>
+      <linearGradient id="jZ1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#A04FCC" stop-opacity="0.22"/><stop offset="100%" stop-color="#A04FCC" stop-opacity="0.08"/></linearGradient>
+      <linearGradient id="jZ2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#26C6DA" stop-opacity="0.22"/><stop offset="100%" stop-color="#26C6DA" stop-opacity="0.08"/></linearGradient>
+      <linearGradient id="jZ3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFB347" stop-opacity="0.30"/><stop offset="100%" stop-color="#FFB347" stop-opacity="0.10"/></linearGradient>
+      <radialGradient id="jSun" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FFE066" stop-opacity="0.9"/><stop offset="60%" stop-color="#FFD700" stop-opacity="0.35"/><stop offset="100%" stop-color="#FFD700" stop-opacity="0"/></radialGradient>
+      <linearGradient id="jLeadTrail" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#e8407a"/></linearGradient>
+      <filter id="chipShadow" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="2" stdDeviation="2.2" flood-color="#1a0a5e" flood-opacity="0.20"/></filter>
     </defs>
+
     <rect width="880" height="1100" fill="url(#jSky)" rx="16"/>
-    <!-- simplified for patch -->
+    <circle cx="440" cy="130" r="150" fill="url(#jSun)"/>
+
+    <polygon points="440,150 313,460 567,460" fill="url(#jZ3)"/>
+    <polygon points="313,460 567,460 697,780 183,780" fill="url(#jZ2)"/>
+    <polygon points="183,780 697,780 820,1080 60,1080" fill="url(#jZ1)"/>
+
+    <path d="M60,1080 L440,150 L820,1080" fill="none" stroke="#3a2d6a" stroke-width="2.5" stroke-opacity="0.28" stroke-linejoin="round"/>
+    <polygon points="440,150 406,206 474,206" fill="#ffffff" opacity="0.85"/>
+
+    <line x1="313" y1="460" x2="567" y2="460" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="4 6"/>
+    <line x1="183" y1="780" x2="697" y2="780" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="4 6"/>
+
+    <path d="M300,1040 C260,900 340,850 300,700 C265,560 350,520 330,400 C315,300 380,260 420,205" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+    <path d="M440,1055 C440,900 420,820 440,700 C460,560 420,520 440,400 C445,300 435,260 440,205" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+    <path d="M580,1040 C620,900 540,850 580,700 C615,560 530,520 550,400 C535,300 470,260 460,205" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+
+    <path d="M300,1040 C260,900 340,850 300,700 C265,560 350,520 330,400 C315,300 380,260 420,205" fill="none" stroke="#FFD700" stroke-width="4" stroke-linecap="round"/>
+    <path d="M440,1055 C440,900 420,820 440,700 C460,560 420,520 440,400 C445,300 435,260 440,205" fill="none" stroke="url(#jLeadTrail)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M580,1040 C620,900 540,850 580,700 C615,560 530,520 550,400 C535,300 470,260 460,205" fill="none" stroke="#00897B" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 8"/>
+
+    <circle cx="292" cy="780" r="7" fill="#FFD700" stroke="#1a0a5e" stroke-width="1.5"/>
+    <circle cx="437" cy="780" r="7" fill="#8a3fd8" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="588" cy="780" r="7" fill="#00897B" stroke="#fff" stroke-width="1.5"/>
+    <line x1="292" y1="787" x2="292" y2="794" stroke="#FFD700" stroke-width="2"/>
+    <line x1="437" y1="787" x2="437" y2="794" stroke="#8a3fd8" stroke-width="2"/>
+    <line x1="588" y1="787" x2="588" y2="794" stroke="#00897B" stroke-width="2"/>
+    <rect x="247" y="794" width="90" height="20" rx="10" fill="#fffdf7" stroke="#FFD700" stroke-opacity="0.6" stroke-width="1" filter="url(#chipShadow)"/>
+    <rect x="382" y="794" width="110" height="20" rx="10" fill="#fdfbff" stroke="#8a3fd8" stroke-opacity="0.5" stroke-width="1" filter="url(#chipShadow)"/>
+    <rect x="536" y="794" width="104" height="20" rx="10" fill="#f7fefc" stroke="#00897B" stroke-opacity="0.5" stroke-width="1" filter="url(#chipShadow)"/>
+    <text x="292" y="808" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#8a6d1a">Inner Calm</text>
+    <text x="437" y="808" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#7834c9">Lead Yourself</text>
+    <text x="588" y="808" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#00897B">Money Basics</text>
+
+    <circle cx="328" cy="460" r="7" fill="#FFD700" stroke="#1a0a5e" stroke-width="1.5"/>
+    <circle cx="440" cy="460" r="7" fill="#c1408f" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="543" cy="460" r="7" fill="#00897B" stroke="#fff" stroke-width="1.5"/>
+    <line x1="328" y1="467" x2="328" y2="474" stroke="#FFD700" stroke-width="2"/>
+    <line x1="440" y1="467" x2="440" y2="474" stroke="#c1408f" stroke-width="2"/>
+    <line x1="543" y1="467" x2="543" y2="474" stroke="#00897B" stroke-width="2"/>
+    <rect x="283" y="474" width="90" height="18" rx="9" fill="#fffdf7" stroke="#FFD700" stroke-opacity="0.6" stroke-width="1" filter="url(#chipShadow)"/>
+    <rect x="398" y="474" width="84" height="18" rx="9" fill="#fdfbff" stroke="#c1408f" stroke-opacity="0.5" stroke-width="1" filter="url(#chipShadow)"/>
+    <rect x="501" y="474" width="84" height="18" rx="9" fill="#f7fefc" stroke="#00897B" stroke-opacity="0.5" stroke-width="1" filter="url(#chipShadow)"/>
+    <text x="328" y="487" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#8a6d1a">Manage Anger</text>
+    <text x="440" y="487" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#9c2f7a">Lead a Team</text>
+    <text x="543" y="487" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#00897B">Life Skills</text>
+
+    <circle cx="420" cy="205" r="6" fill="#FFD700" stroke="#1a0a5e" stroke-width="1.5"/>
+    <circle cx="440" cy="205" r="6" fill="#e8407a" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="460" cy="205" r="6" fill="#00897B" stroke="#fff" stroke-width="1.5"/>
+
+    <line x1="215" y1="930" x2="121" y2="930" stroke="#5a3d8a" stroke-width="1.5" stroke-dasharray="3 4" stroke-opacity="0.5"/>
+    <text x="210" y="918" text-anchor="end" font-family="Inter, sans-serif" font-size="15" font-weight="800" fill="#5a3d8a">YEAR 1</text>
+    <text x="210" y="936" text-anchor="end" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#7a6fa0">Foundations · Ages 10–12</text>
+
+    <line x1="215" y1="620" x2="248" y2="620" stroke="#00798A" stroke-width="1.5" stroke-dasharray="3 4" stroke-opacity="0.5"/>
+    <text x="210" y="608" text-anchor="end" font-family="Inter, sans-serif" font-size="15" font-weight="800" fill="#00798A">YEAR 2</text>
+    <text x="210" y="626" text-anchor="end" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#4a9aa8">Growth · Ages 13–15</text>
+
+    <line x1="215" y1="300" x2="377" y2="300" stroke="#C9860A" stroke-width="1.5" stroke-dasharray="3 4" stroke-opacity="0.5"/>
+    <text x="210" y="288" text-anchor="end" font-family="Inter, sans-serif" font-size="15" font-weight="800" fill="#C9860A">YEAR 3</text>
+    <text x="210" y="306" text-anchor="end" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#caa15a">Mastery · Ages 16–18</text>
+
+    <text x="440" y="1073" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="800" letter-spacing="2" fill="#8878b8">DAY ONE</text>
+    <text x="440" y="95" text-anchor="middle" font-family="Marcellus, serif" font-size="20" font-weight="700" letter-spacing="1" fill="#e0a300">READY FOR LIFE</text>
   </svg>
 </div>
 
@@ -420,8 +501,8 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;background:#fafaff;
   <h3>Ready to begin?</h3>
   <p>We're opening doors to a small first cohort. Talk to us about your child.</p>
   <div class="footer-ctas">
-    <button class="cta">Enroll Today</button>
-    <button class="cta-secondary">Schedule a Call</button>
+    <a class="cta" href="signup.html">Enroll Today</a>
+    <a class="cta-secondary" href="contact.html">Schedule a Call</a>
   </div>
 </div>
 

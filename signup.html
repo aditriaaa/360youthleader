@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up | The 360° Youth Leader</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body{background:#f0ebf8;}
+    .gform-wrap{max-width:760px;margin:0 auto;padding:28px 20px 60px;}
+    .gform-topbar{height:10px;border-radius:8px 8px 0 0;background:linear-gradient(90deg,#7c3aed,#e8407a,#f97316);}
+    .gform-header{background:#fff;border:1px solid #e3ddf2;border-top:none;border-radius:0 0 8px 8px;padding:26px 28px;margin-bottom:24px;box-shadow:0 2px 8px rgba(30,20,80,0.06);}
+    .gform-header h1{margin:0 0 10px;font-size:26px;color:#1a0a5e;}
+    .gform-header p{margin:0;color:#5a5570;font-size:14px;line-height:1.6;}
+    .gform-required-note{margin-top:14px;font-size:12px;color:#c0392b;}
+    .gform-card{background:#fff;border:1px solid #e3ddf2;border-radius:8px;padding:22px 24px;margin-bottom:18px;box-shadow:0 2px 8px rgba(30,20,80,0.05);}
+    .gform-q{font-size:15px;font-weight:600;color:#202124;margin-bottom:14px;}
+    .gform-q .req{color:#c0392b;margin-left:3px;}
+    .gform-input{width:100%;padding:8px 4px;border:none;border-bottom:1px solid #d8d3e8;font-size:14px;font-family:inherit;background:transparent;}
+    .gform-input:focus{outline:none;border-bottom:2px solid #7c3aed;}
+    .gform-option{display:flex;align-items:center;gap:10px;padding:6px 0;font-size:14px;color:#3c3c4a;}
+    .gform-option input{width:16px;height:16px;accent-color:#7c3aed;}
+    .gform-select{width:100%;padding:8px 4px;border:none;border-bottom:1px solid #d8d3e8;font-size:14px;background:transparent;font-family:inherit;}
+    .gform-select:focus{outline:none;border-bottom:2px solid #7c3aed;}
+    .gform-textarea{width:100%;min-height:80px;border:none;border-bottom:1px solid #d8d3e8;font-size:14px;font-family:inherit;background:transparent;resize:vertical;padding:8px 4px;}
+    .gform-textarea:focus{outline:none;border-bottom:2px solid #7c3aed;}
+    .gform-submit-row{display:flex;align-items:center;justify-content:space-between;margin-top:8px;}
+    .gform-placeholder-note{background:#fff8e6;border:1px solid #f0dca0;color:#8a6d1a;border-radius:8px;padding:12px 16px;font-size:13px;margin-bottom:20px;}
+  </style>
+</head>
+<body>
+  <div class="topnav">
+    <div class="brand">The 360° Youth Leader</div>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="journey.html">Journey</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+      <a class="nav-link" href="signup.html">Sign Up</a>
+    </div>
+  </div>
+
+  <div class="gform-wrap">
+    <a class="back" href="index.html">← Back to home</a>
+
+    <div class="gform-placeholder-note">
+      This is a placeholder interest form — it is not yet connected to any submission service. No information entered here is saved or sent.
+    </div>
+
+    <div class="gform-topbar"></div>
+    <div class="gform-header">
+      <h1>The 360° Youth Leader — Program Interest Form</h1>
+      <p>Thanks for your interest in The 360° Youth Leader! Fill out this short form and our team will follow up about the pilot cohort, launching January 2027. We're a nonprofit, and every response helps us understand which tracks and formats families care about most.</p>
+      <div class="gform-required-note">* Indicates a required question</div>
+    </div>
+
+    <form onsubmit="event.preventDefault();document.getElementById('gformThanks').style.display='block';this.querySelector('.gform-submit-row').style.display='none';">
+
+      <div class="gform-card">
+        <div class="gform-q">Parent / Guardian full name<span class="req">*</span></div>
+        <input class="gform-input" type="text" required placeholder="Your answer">
+      </div>
+
+      <div class="gform-card">
+        <div class="gform-q">Email address<span class="req">*</span></div>
+        <input class="gform-input" type="email" required placeholder="Your answer">
+      </div>
+
+      <div class="gform-card">
+        <div class="gform-q">Phone number</div>
+        <input class="gform-input" type="text" placeholder="Your answer">
+      </div>
+
+      <div class="gform-card">
+        <div class="gform-q">Child's full name<span class="req">*</span></div>
+        <input class="gform-input" type="text" required placeholder="Your answer">
+      </div>
+
+      <div class="gform-card">
+        <div class="gform-q">Child's age<span class="req">*</span></div>
+        <select class="gform-select" required>
+          <option value="">Choose</option>
+          <option>10</option><option>11</option><option>12</option><option>13</option>
+          <option>14</option><option>15</option><option>16</option><option>17</option><option>18</option>
+        </select>
+      </div>
+
+      <div class="gform-card">
+        <div class="gform-q">Which track(s) are you interested in?<span class="req">*</span></div>
+        <label class="gform-option"><input type="checkbox"> Leadership</label>
+        <label class="gform-option"><input type="checkbox"> Mastery of Mind, Body & Soul</label>
+        <label class="gform-option"><input type="checkbox"> Future Pathways</label>
+        <label class="gform-option"><input type="checkbox"> Voice, Brand & Influence</label>
+        <label class="gform-option"><input type="checkbox"> Money Smarts</label>
+        <label class="gform-option"><input type="checkbox"> Community & Character</label>
+        <label class="gform-option"><input type="checkbox"> Safety & Self Defense</label>
+        <label class="gform-option"><input type="checkbox"> Not sure yet — interested in the full program</label>
+      </div>
+
+      <div class="gform-card">
+        <div class="gform-q">Preferred program format</div>
+        <label class="gform-option"><input type="radio" name="format"> In-person</label>
+        <label class="gform-option"><input type="radio" name="format"> Virtual</label>
+        <label class="gform-option"><input type="radio" name="format"> No preference</label>
+      </div>
+
+      <div class="gform-card">
+        <div class="gform-q">How did you hear about us?</div>
+        <label class="gform-option"><input type="radio" name="heard"> Friend or family</label>
+        <label class="gform-option"><input type="radio" name="heard"> Social media</label>
+        <label class="gform-option"><input type="radio" name="heard"> School or community group</label>
+        <label class="gform-option"><input type="radio" name="heard"> Search engine</label>
+        <label class="gform-option"><input type="radio" name="heard"> Other</label>
+      </div>
+
+      <div class="gform-card">
+        <div class="gform-q">Anything else you'd like us to know?</div>
+        <textarea class="gform-textarea" placeholder="Your answer"></textarea>
+      </div>
+
+      <div class="gform-submit-row">
+        <button class="btn" type="submit">Submit</button>
+        <span style="font-size:12px;color:#7a7690;">Never submit passwords through this form.</span>
+      </div>
+
+      <div id="gformThanks" style="display:none;margin-top:16px;padding:18px;background:#eefaf0;border:1px solid #b9e6c4;border-radius:8px;color:#1c6b32;font-size:14px;">
+        Thanks — this is a placeholder confirmation. A real submission handler isn't connected yet.
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2026 <strong>360 Degree Youth Leadership Initiative</strong>.</p>
+  </footer>
+</body>
+</html>
