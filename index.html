@@ -116,28 +116,26 @@ h1,h2,h3,.brand,.feat-title,.diff-title,.journey-h,.footer h3,.splash-title{font
 .features.youth-mode h2{background:linear-gradient(135deg,#7c3aed,#e8407a,#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .features .sub2{text-align:center;color:#b3a8d9;font-size:15px;margin-bottom:24px;}
 
-.audience-toggle{display:flex;justify-content:center;margin-bottom:36px;} 
-.toggle-pill{display:inline-flex;background:#fff;border:2px solid #ecebfa;border-radius:30px;padding:5px;position:relative;box-shadow:0 4px 16px rgba(40,30,120,0.08);} 
-.toggle-btn{position:relative;z-index:2;padding:9px 22px;font-family:'Roboto',sans-serif;font-size:13px;font-weight:700;color:#9990b8;background:none;border:none;cursor:pointer;border-radius:24px;transition:color .3s;display:inline-flex;align-items:center;gap:6px;letter-spacing:0.2px;} 
-.toggle-btn.active{color:#fff;} 
-.toggle-btn.jump-btn{color:#5a3d8a;} 
-.toggle-btn.jump-btn:hover{color:#3a1d8a;background:#f0eafa;} 
-.toggle-slider{position:absolute;top:5px;left:5px;height:calc(100% - 10px);background:linear-gradient(135deg,#5a3d8a,#3a1d8a);border-radius:24px;transition:transform .4s cubic-bezier(0.4,0,0.2,1), width .4s cubic-bezier(0.4,0,0.2,1), background .4s;z-index:1;box-shadow:0 4px 12px rgba(90,60,170,0.3);} 
+.audience-toggle{display:flex;justify-content:center;margin-bottom:36px;}
+.toggle-pill{display:inline-flex;background:transparent;border:2px solid rgba(205,189,240,0.35);border-radius:34px;padding:6px;position:relative;}
+.toggle-btn{position:relative;z-index:2;padding:13px 30px;font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;color:#cdbdf0;background:none;border:none;cursor:pointer;border-radius:26px;transition:color .3s;display:inline-flex;align-items:center;gap:8px;letter-spacing:0.2px;}
+.toggle-btn.active{color:#fff;}
+.toggle-slider{position:absolute;top:6px;left:6px;height:calc(100% - 12px);background:linear-gradient(135deg,#5a3d8a,#3a1d8a);border-radius:26px;transition:transform .4s cubic-bezier(0.4,0,0.2,1), width .4s cubic-bezier(0.4,0,0.2,1), background .4s;z-index:1;box-shadow:0 4px 12px rgba(90,60,170,0.3);}
 .toggle-pill.youth-active .toggle-slider{background:linear-gradient(135deg,#7c3aed,#e8407a);} 
 
 .feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:22px;}
 
 .tracks-paragraphs{max-width:1180px;margin:20px auto 0;padding:0 24px}
-.tracks-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:12px;margin-top:12px}
-.track-paragraph{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:12px;background:#fff;border:1px solid #ecebfa;text-decoration:none;color:#2a2a44}
+.tracks-list{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:16px}
+.track-paragraph{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:12px;background:#fff;border:1px solid #ecebfa;text-decoration:none;color:#2a2a44;flex:1 1 240px;max-width:260px}
 .track-paragraph svg{width:28px;height:28px;flex-shrink:0}
 .track-paragraph strong{display:block;margin-bottom:4px}
 
-.feat-card{background:#fff;border-radius:18px;padding:26px;box-shadow:0 4px 24px rgba(40,30,120,0.07);border:1.5px solid #ecebfa;transition:transform .25s,box-shadow .25s,border-color .25s,opacity .35s ease;cursor:pointer;position:relative;overflow:hidden;} 
+.feat-card{background:#fff;border-radius:18px;padding:26px;box-shadow:0 4px 24px rgba(40,30,120,0.07);border:1.5px solid #ecebfa;transition:transform .25s,box-shadow .25s,border-color .25s,opacity .35s ease;cursor:pointer;position:relative;} 
 .feat-card.fading-out{opacity:0;transform:translateY(8px);} 
 .feat-card.fading-in{opacity:0;transform:translateY(-8px);animation:softFadeIn .5s cubic-bezier(0.25,0.1,0.25,1) forwards;} 
 @keyframes softFadeIn{0%{opacity:0;transform:translateY(-8px);}100%{opacity:1;transform:translateY(0);}} 
-.feat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--g);} 
+.feat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;border-radius:18px 18px 0 0;background:var(--g);}
 .feat-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(40,30,120,0.14);} 
 .feat-card.highlight{border-color:var(--c);box-shadow:0 18px 48px var(--c-shadow);transform:translateY(-4px);} 
 .feat-icon{width:56px;height:56px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center;margin-bottom:16px;box-shadow:0 8px 20px var(--c-shadow);} 
@@ -149,8 +147,45 @@ h1,h2,h3,.brand,.feat-title,.diff-title,.journey-h,.footer h3,.splash-title{font
 
 .topics-header{font-size:11px;font-weight:700;color:var(--c);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:10px;} 
 .topics-list{display:flex;flex-wrap:wrap;gap:6px;} 
-.topic-pill{display:inline-block;background:var(--bg);color:var(--c);border:1.5px solid var(--border);border-radius:18px;padding:5px 12px;font-size:12px;font-weight:600;} 
-.topic-pill.gita{background:#0d0840;color:#FFD700;border:1.5px solid #FFD700;font-weight:700;} 
+.topic-pill{position:relative;display:inline-block;background:var(--bg);color:var(--c);border:1.5px solid var(--border);border-radius:18px;padding:5px 12px;font-size:12px;font-weight:600;cursor:default;}
+.topic-pill.gita{background:#0d0840;color:#FFD700;border:1.5px solid #FFD700;font-weight:700;}
+.topic-pill[data-tip]:hover::after,.topic-pill[data-tip]:focus-visible::after{
+  content:attr(data-tip);
+  position:absolute;
+  bottom:calc(100% + 9px);
+  left:50%;
+  transform:translateX(-50%);
+  width:max-content;
+  max-width:210px;
+  background:#1a0a5e;
+  color:#f4efff;
+  font-size:12px;
+  font-weight:500;
+  line-height:1.45;
+  letter-spacing:0;
+  text-transform:none;
+  white-space:normal;
+  text-align:left;
+  padding:9px 12px;
+  border-radius:9px;
+  box-shadow:0 10px 28px rgba(20,10,80,0.32);
+  z-index:60;
+  pointer-events:none;
+  animation:topicTipIn .15s ease both;
+}
+.topic-pill[data-tip]:hover::before,.topic-pill[data-tip]:focus-visible::before{
+  content:'';
+  position:absolute;
+  bottom:calc(100% + 4px);
+  left:50%;
+  transform:translateX(-50%);
+  border:6px solid transparent;
+  border-top-color:#1a0a5e;
+  z-index:60;
+  pointer-events:none;
+  animation:topicTipIn .15s ease both;
+}
+@keyframes topicTipIn{from{opacity:0;transform:translateX(-50%) translateY(4px);}to{opacity:1;transform:translateX(-50%) translateY(0);}}
 
 .footer{max-width:900px;margin:64px auto 0;padding:36px 24px;background:linear-gradient(135deg,#1a0a5e 0%,#3a1d8a 100%);border:1px solid rgba(255,255,255,0.08);border-radius:20px;text-align:center;color:#fff;}
 .footer h3{font-size:32px;color:#FFD700;margin-bottom:10px;letter-spacing:0.3px;}
@@ -213,7 +248,7 @@ h1,h2,h3,.brand,.feat-title,.diff-title,.journey-h,.footer h3,.splash-title{font
 
 .footer-pilot-badge{display:inline-block;background:rgba(255,215,0,0.15);color:#FFD700;font-size:11px;font-weight:800;letter-spacing:2px;padding:6px 16px;border-radius:20px;margin-bottom:20px;border:1px solid rgba(255,215,0,0.4);} 
 .footer-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:24px;} 
-.cta-secondary{display:inline-block;text-decoration:none;background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.4);padding:14px 32px;border-radius:30px;font-family:'Roboto',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;}
+.cta-secondary{display:inline-block;text-decoration:none;background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.4);padding:16px 40px;border-radius:32px;font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;cursor:pointer;transition:all .2s;}
 .cta-secondary:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.7);} 
 
 .wheel-tooltip{position:fixed;background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 12px 40px rgba(40,30,120,0.22);border:1.5px solid #ecebfa;pointer-events:none;z-index:1000;opacity:0;transform:translateY(6px);transition:opacity .18s, transform .18s;max-width:280px;font-family:'Roboto',sans-serif;} 
@@ -432,7 +467,6 @@ h1,h2,h3,.brand,.feat-title,.diff-title,.journey-h,.footer h3,.splash-title{font
   <div class="tag">Ready to take on the world.</div>
   <div class="pillars">Life Skills · Character · Transformation</div>
   <div class="sub">Go beyond academics: a journey of skills, character, and inner leadership for youth ages 10–18, built on the wisdom of the Gita.</div>
-  <button class="cta">Explore the Program</button>
 </div>
 
 <div class="wheel-section">
@@ -475,9 +509,9 @@ h1,h2,h3,.brand,.feat-title,.diff-title,.journey-h,.footer h3,.splash-title{font
 
   <div class="side-stats right">
     <div class="stat" style="--c:#7B1FA2;">
-      <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6l8-3z"/></svg></div>
-      <div class="stat-num">1</div>
-      <div class="stat-label">Foundational Class</div>
+      <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+      <div class="stat-num">50+</div>
+      <div class="stat-label">Shlokas Taught</div>
     </div>
     <div class="stat" style="--c:#E64A19;">
       <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M10 14h4l-1 4h-2l-1-4z"/></svg></div>
@@ -488,6 +522,21 @@ h1,h2,h3,.brand,.feat-title,.diff-title,.journey-h,.footer h3,.splash-title{font
 
 </div>
 
+<div class="expert-perspective">
+  <div class="expert-perspective-inner">
+    <div class="expert-tag">Featured Expert Perspective</div>
+    <div class="expert-quote-mark">"</div>
+    <div class="expert-quote">Your kids need three skills to thrive in the AI era, and none of them are taught in school: telling a compelling story, building genuine relationships, and bouncing back from setbacks.</div>
+    <div class="expert-attribution"><strong>Scott Galloway</strong>, Professor of Marketing, NYU Stern School of Business</div>
+
+    <div class="expert-response">
+      <div class="expert-response-label">Our Response</div>
+      <div class="expert-response-text">All three are already woven into The 360° Youth Leader. <em>Storytelling</em> lives in the Voice, Brand & Influence track. <em>Building Relationships</em> sits in the Leadership track. <em>Bouncing Back</em> is a core Leadership Mastery milestone.</div>
+    </div>
+    <div class="expert-source">Referenced from Yahoo Finance, October 2025.</div>
+  </div>
+</div>
+
 <div class="features" id="features">
   <h2 id="features-h2"><span class="h2-text">The Seven Tracks</span><span class="youth-emoji">⚡</span></h2>
   <div class="sub2" id="features-sub">Click any track in the wheel above to find it below. Ordered by what parents tell us matters most.</div>
@@ -496,7 +545,6 @@ h1,h2,h3,.brand,.feat-title,.diff-title,.journey-h,.footer h3,.splash-title{font
       <div class="toggle-slider" id="toggleSlider"></div>
       <button class="toggle-btn active" data-mode="parent">👨‍👩‍👧 For Parents</button>
       <button class="toggle-btn" data-mode="youth">⚡ For You</button>
-      <button class="toggle-btn jump-btn" data-jump="journey">🏔️ The Journey ↓</button>
     </div>
   </div>
   <div class="feat-grid" id="grid"></div>
@@ -621,9 +669,9 @@ h1,h2,h3,.brand,.feat-title,.diff-title,.journey-h,.footer h3,.splash-title{font
     <line x1="292" y1="787" x2="292" y2="794" stroke="#FFD700" stroke-width="2"/>
     <line x1="437" y1="787" x2="437" y2="794" stroke="#8a3fd8" stroke-width="2"/>
     <line x1="588" y1="787" x2="588" y2="794" stroke="#00897B" stroke-width="2"/>
-    <rect x="247" y="794" width="90" height="20" rx="10" fill="#fffdf7" stroke="#FFD700" stroke-opacity="0.6" stroke-width="1" filter="url(#chipShadow)"/>
-    <rect x="382" y="794" width="110" height="20" rx="10" fill="#fdfbff" stroke="#8a3fd8" stroke-opacity="0.5" stroke-width="1" filter="url(#chipShadow)"/>
-    <rect x="536" y="794" width="104" height="20" rx="10" fill="#f7fefc" stroke="#00897B" stroke-opacity="0.5" stroke-width="1" filter="url(#chipShadow)"/>
+    <rect x="247" y="794" width="90" height="20" rx="4" fill="#fffdf7" stroke="#FFD700" stroke-opacity="0.6" stroke-width="1"/>
+    <rect x="382" y="794" width="110" height="20" rx="4" fill="#fdfbff" stroke="#8a3fd8" stroke-opacity="0.5" stroke-width="1"/>
+    <rect x="536" y="794" width="104" height="20" rx="4" fill="#f7fefc" stroke="#00897B" stroke-opacity="0.5" stroke-width="1"/>
     <text x="292" y="808" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#8a6d1a">Inner Calm</text>
     <text x="437" y="808" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#7834c9">Lead Yourself</text>
     <text x="588" y="808" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#00897B">Money Basics</text>
@@ -634,9 +682,9 @@ h1,h2,h3,.brand,.feat-title,.diff-title,.journey-h,.footer h3,.splash-title{font
     <line x1="328" y1="467" x2="328" y2="474" stroke="#FFD700" stroke-width="2"/>
     <line x1="440" y1="467" x2="440" y2="474" stroke="#c1408f" stroke-width="2"/>
     <line x1="543" y1="467" x2="543" y2="474" stroke="#00897B" stroke-width="2"/>
-    <rect x="283" y="474" width="90" height="18" rx="9" fill="#fffdf7" stroke="#FFD700" stroke-opacity="0.6" stroke-width="1" filter="url(#chipShadow)"/>
-    <rect x="398" y="474" width="84" height="18" rx="9" fill="#fdfbff" stroke="#c1408f" stroke-opacity="0.5" stroke-width="1" filter="url(#chipShadow)"/>
-    <rect x="501" y="474" width="84" height="18" rx="9" fill="#f7fefc" stroke="#00897B" stroke-opacity="0.5" stroke-width="1" filter="url(#chipShadow)"/>
+    <rect x="283" y="474" width="90" height="18" rx="4" fill="#fffdf7" stroke="#FFD700" stroke-opacity="0.6" stroke-width="1"/>
+    <rect x="398" y="474" width="84" height="18" rx="4" fill="#fdfbff" stroke="#c1408f" stroke-opacity="0.5" stroke-width="1"/>
+    <rect x="501" y="474" width="84" height="18" rx="4" fill="#f7fefc" stroke="#00897B" stroke-opacity="0.5" stroke-width="1"/>
     <text x="328" y="487" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#8a6d1a">Manage Anger</text>
     <text x="440" y="487" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#9c2f7a">Lead a Team</text>
     <text x="543" y="487" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#00897B">Life Skills</text>
@@ -657,7 +705,7 @@ h1,h2,h3,.brand,.feat-title,.diff-title,.journey-h,.footer h3,.splash-title{font
     <text x="210" y="288" text-anchor="end" font-family="Roboto, sans-serif" font-size="15" font-weight="800" fill="#C9860A">YEAR 3</text>
     <text x="210" y="308" text-anchor="end" font-family="Roboto, sans-serif" font-size="12" font-weight="600" fill="#caa15a">Mastery · Ages 16–18</text>
 
-    <text x="440" y="1073" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="800" letter-spacing="2" fill="#8878b8">DAY ONE</text>
+    <text x="440" y="1073" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="800" letter-spacing="2" fill="#8878b8">THE JOURNEY BEGINS</text>
     <text x="440" y="95" text-anchor="middle" font-family="Black Ops One, cursive" font-size="20" font-weight="700" letter-spacing="1" fill="#e0a300">READY FOR LIFE</text>
   </svg>
 </div>
@@ -690,18 +738,31 @@ h1,h2,h3,.brand,.feat-title,.diff-title,.journey-h,.footer h3,.splash-title{font
   </div>
 </div>
 
-<div class="expert-perspective">
-  <div class="expert-perspective-inner">
-    <div class="expert-tag">Featured Expert Perspective</div>
-    <div class="expert-quote-mark">"</div>
-    <div class="expert-quote">Your kids need three skills to thrive in the AI era, and none of them are taught in school: telling a compelling story, building genuine relationships, and bouncing back from setbacks.</div>
-    <div class="expert-attribution"><strong>Scott Galloway</strong>, Professor of Marketing, NYU Stern School of Business</div>
-
-    <div class="expert-response">
-      <div class="expert-response-label">Our Response</div>
-      <div class="expert-response-text">All three are already woven into The 360° Youth Leader. <em>Storytelling</em> lives in the Voice, Brand & Influence track. <em>Building Relationships</em> sits in the Leadership track. <em>Bouncing Back</em> is a core Leadership Mastery milestone.</div>
+<div class="differentiators">
+  <h2>How It Works</h2>
+  <div class="sub3">From Gita-rooted principles to real-world practice, in three steps.</div>
+  <div class="diff-list">
+    <div class="diff-row">
+      <div class="diff-icon-wrap">📖</div>
+      <div class="diff-content">
+        <div class="diff-title">1. Learn the principle</div>
+        <div class="diff-desc">Each track opens with a Gita-rooted value, like <em>dharma</em>, <em>sthitaprajna</em>, or <em>karma yoga</em>, explained in language a young person actually understands.</div>
+      </div>
     </div>
-    <div class="expert-source">Referenced from Yahoo Finance, October 2025.</div>
+    <div class="diff-row">
+      <div class="diff-icon-wrap">🛠️</div>
+      <div class="diff-content">
+        <div class="diff-title">2. Practice it</div>
+        <div class="diff-desc">Coaching, workshops, and structured exercises turn the idea into a habit: a decision framework, a speech, a budget, a real conversation.</div>
+      </div>
+    </div>
+    <div class="diff-row">
+      <div class="diff-icon-wrap">🌍</div>
+      <div class="diff-content">
+        <div class="diff-title">3. Apply it in the real world</div>
+        <div class="diff-desc">Kids put it to work through real opportunities: industry volunteering, CNA and Medical Assistant shadowing, internships and research, mentorship, entrepreneurship projects, and community service.</div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -746,6 +807,52 @@ const wheelTracks=[
   {id:"community",name:"Community &<br>Character",c:"#00897B",grad:["#26A99A","#006A60"],bg:"#EEFAF8",icon:"heart"}
 ];
 
+const TOPIC_BLURBS={
+  "Gita Warriors: Value-Based Leadership for Youth":"The value-based foundation running through every track, rooted in lessons from the Gita.",
+  "Leading Self & Others":"Staying grounded first, so you can actually help the people around you.",
+  "Purpose, Vision & Goal Setting":"Figuring out what actually matters to you, then setting goals that get you there.",
+  "Decision Making":"A simple way to think through tough calls instead of freezing up.",
+  "Calm Under Pressure":"Practicing how to stay steady when things get stressful or chaotic.",
+  "Bouncing Back":"Learning to get back up after a setback instead of dwelling on it.",
+  "Building Relationships":"The everyday habits that make people trust you and want to work with you.",
+  "Conflict Resolution":"How to work through disagreements without a blowup or a grudge.",
+  "Time Management":"Getting the important stuff done without living in constant panic mode.",
+  "Mental Health":"Real talk about stress, anxiety, and how to take care of your mind.",
+  "Empathy & EI":"Reading a room and understanding what other people are actually feeling.",
+  "Growth Mindset":"Treating mistakes as information instead of proof that you've failed.",
+  "Self Confidence":"Building a quiet, steady belief in yourself that doesn't need constant validation.",
+  "Tackling Stress":"Practical tools for the moments when everything feels like too much.",
+  "Conquering Anger":"Understanding what's actually behind anger, so it stops running the show.",
+  "Building the Right Associations":"Choosing friends and company that bring out your best, not your worst.",
+  "Chess & Critical Thinking":"Thinking a few moves ahead, on and off the board.",
+  "Yoga":"Simple movement and breathing practices that build focus and calm.",
+  "Healthy Diet":"The basics of eating well, without the fads or the guilt.",
+  "College Counseling":"One-on-one guidance on picking schools and building a real plan.",
+  "College Essays":"Help finding a genuine story to tell, and the writing to tell it well.",
+  "Architecting a Résumé":"Turning everyday experience into something that actually stands out on paper.",
+  "Scholarships":"Finding and applying for scholarships most families never hear about.",
+  "Internships / Research":"Getting real experience in a field before committing to it.",
+  "Industry Volunteering":"Trying out different careers hands-on, not just reading about them.",
+  "Medical Opportunity: CNA":"Hands-on exposure to patient care through a real CNA opportunity.",
+  "Medical Opportunity: Medical Assistant":"A closer look at clinical work through a real Medical Assistant opportunity.",
+  "Public Speaking":"Getting comfortable in front of a crowd, one talk at a time.",
+  "Storytelling":"Learning to tell a story people actually want to listen to.",
+  "Persuasive Writing":"Making a case on paper that's clear, honest, and convincing.",
+  "Publishing a Book":"Turning an idea into a finished book, from first draft to publishing.",
+  "Personal Brand":"Figuring out how to present yourself online and off, on your own terms.",
+  "Mentorship":"Learning from people a few steps ahead, and later becoming that person for someone else.",
+  "Personal Finance / Investing":"The basics of budgeting, saving, and investing that most adults wish they'd learned sooner.",
+  "Entrepreneurship":"What it actually takes to start something of your own.",
+  "Side Hustle":"Turning a skill or interest into your first bit of real income.",
+  "Home Economics":"The everyday practical skills, cooking, budgeting, basic repairs, that keep a household running.",
+  "Giving Back through Meaningful Volunteering (Seva)":"Hands-on service that means something, not just a box to check.",
+  "Civic Sense & Etiquette":"The everyday manners and awareness that make you easy to be around.",
+  "Service Awards":"Recognition for the kids who put real hours into serving others.",
+  "Self Defense":"Practical moves and awareness to help you stay safe in a bad situation.",
+  "CPR & First Aid":"Knowing what to do in the first few minutes of an emergency.",
+  "Digital Safety":"Staying sharp online: spotting scams, protecting privacy, avoiding trouble."
+};
+
 const cardOrder=[
   {id:"lead",      short:"Leadership", youthShort:"Lead Yourself, Lead the Room",
    desc:"We want our children to stand on their own: to stay calm when life gets hard, make good decisions, and pick themselves up after they fall. We teach them to lead themselves first, then others. Above all, to do what's right, even when it's hard. The Gita calls this <em>dharma</em>, and it's the foundation of real leadership.",
@@ -758,7 +865,7 @@ const cardOrder=[
   {id:"future",    short:"Future Pathways", youthShort:"Architect Your Future",
    desc:"College, careers, scholarships: the journey to your child's future starts earlier than most realize. We help your kid take small, thoughtful steps now, like volunteering across industries (medicine, finance, arts, tech), and exploring early, so they can find their purpose.",
    youthDesc:"Nobody hands you a roadmap to college, careers, or scholarships. Most kids figure it out when it's too late, or don't figure it out at all. Start now and the big stuff later doesn't feel so heavy. We help you build that runway, one piece at a time.",
-   items:["College Counseling","College Essays","Architecting a Résumé","Scholarships","Internships / Research","Industry Volunteering","Medical Opportunity — CNA","Medical Opportunity — Medical Assistant"]},
+   items:["College Counseling","College Essays","Architecting a Résumé","Scholarships","Internships / Research","Industry Volunteering","Medical Opportunity: CNA","Medical Opportunity: Medical Assistant"]},
   {id:"voice",     short:"Voice, Brand & Influence", youthShort:"Own Your Voice, Own the Room",
    desc:"Many of us grew up shy about speaking up in front of a crowd, and we know how much that held us back. We help children express themselves clearly, with confidence and humility, so they're never afraid to share what they think or who they are.",
    youthDesc:"Have you ever had something to say and didn't say it? Everyone has. But this can set you back in classrooms, interviews, online. Speaking well isn't about being the loudest in the room, it's about being clear and confident. That's a skill you'll develop through this track.",
@@ -922,7 +1029,13 @@ function renderCards(mode){
     c.style.setProperty('--bg',t.bg);
     c.style.setProperty('--border',t.c+'55');
 
-    const pills=card.items.map(it=>{if(it.isGita)return `<span class="topic-pill gita">⚔️ ${it.name}</span>`;return `<span class="topic-pill">${it}</span>`;}).join('');
+    const pills=card.items.map(it=>{
+      const name=it.isGita?it.name:it;
+      const blurb=TOPIC_BLURBS[name];
+      const tip=blurb?` data-tip="${blurb.replace(/"/g,'&quot;')}" tabindex="0"`:'';
+      if(it.isGita)return `<span class="topic-pill gita"${tip}>⚔️ ${it.name}</span>`;
+      return `<span class="topic-pill"${tip}>${it}</span>`;
+    }).join('');
 
     const title = mode==='youth' ? card.youthShort : card.short;
     const description = mode==='youth' ? card.youthDesc : card.desc;
@@ -958,9 +1071,9 @@ function switchMode(newMode){
   setTimeout(()=>{document.querySelectorAll('.feat-card').forEach(c=>{c.classList.remove('fading-in');c.style.animationDelay='';c.style.transitionDelay='';});},1100);
 }
 
-function positionSlider(){const pill=document.getElementById('togglePill');const slider=document.getElementById('toggleSlider');const activeBtn=pill.querySelector('.toggle-btn.active:not(.jump-btn)');if(!activeBtn||!slider)return;const pillRect=pill.getBoundingClientRect();const btnRect=activeBtn.getBoundingClientRect();slider.style.width=btnRect.width+'px';slider.style.transform=`translateX(${btnRect.left-pillRect.left-5}px)`;}
+function positionSlider(){const pill=document.getElementById('togglePill');const slider=document.getElementById('toggleSlider');const activeBtn=pill.querySelector('.toggle-btn.active');if(!activeBtn||!slider)return;const pillRect=pill.getBoundingClientRect();const btnRect=activeBtn.getBoundingClientRect();slider.style.width=btnRect.width+'px';slider.style.transform=`translateX(${btnRect.left-pillRect.left-6}px)`;}
 
-document.querySelectorAll('.toggle-btn').forEach(btn=>{btn.addEventListener('click',()=>{if(btn.dataset.jump){const target=document.getElementById('journey-section');if(target) target.scrollIntoView({behavior:'smooth',block:'start'});} else if(btn.dataset.mode){switchMode(btn.dataset.mode);}});});
+document.querySelectorAll('.toggle-btn').forEach(btn=>{btn.addEventListener('click',()=>{if(btn.dataset.mode){switchMode(btn.dataset.mode);}});});
 
 // Initial render
 renderCards('parent');
