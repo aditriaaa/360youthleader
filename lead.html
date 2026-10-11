@@ -6,23 +6,45 @@
   <title>Leadership | The 360° Youth Leader</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    body{padding:28px}
+    body{padding:0 28px 28px}
+    .site-header{margin:0 -28px 26px}
     .stage-num{font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#E64A19;margin-bottom:4px}
     .stage-age{font-size:13px;color:var(--muted);margin-bottom:10px;font-weight:600}
     .stage-list{margin:0;padding-left:18px;color:#3a3a55;font-size:14px;line-height:1.75}
   </style>
 </head>
 <body>
-  <div class="topnav">
-    <div class="brand">The 360° Youth Leader</div>
-    <div class="nav-links">
-      <a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link" href="about.html">About</a>
-      <a class="nav-link" href="journey.html">Journey</a>
-      <a class="nav-link" href="contact.html">Contact</a>
-      <a class="nav-link" href="signup.html">Sign Up</a>
-    </div>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="logo" href="index.html" aria-label="The 360° Youth Leader home">
+      <span class="logo-mark" aria-hidden="true">360°</span>
+      <span class="logo-text">The 360° Youth Leader<small>Leadership Initiative</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu">Menu</button>
+    <nav id="site-menu" class="nav-menu" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <button class="dropdown-toggle" aria-expanded="false" aria-controls="tracks-menu">Tracks <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <ul id="tracks-menu" class="dropdown">
+            <li><a href="lead.html"><strong>Leadership</strong><span>Decision-making, calm under pressure, leading self & others.</span></a></li>
+            <li><a href="mind.html"><strong>Mastery of Mind, Body & Soul</strong><span>Stress management, meditation, steady judgment and resilience.</span></a></li>
+            <li><a href="future.html"><strong>Future Pathways</strong><span>College/career planning, internships, scholarships and exploration.</span></a></li>
+            <li><a href="voice.html"><strong>Voice, Brand & Influence</strong><span>Public speaking, storytelling, personal brand and persuasion.</span></a></li>
+            <li><a href="money.html"><strong>Money Smarts</strong><span>Personal finance, earning, saving, investing and entrepreneurship.</span></a></li>
+            <li><a href="community.html"><strong>Community & Character</strong><span>Service, civic sense, character formation and good company.</span></a></li>
+            <li><a href="safety.html"><strong>Safety & Self Defense</strong><span>Self-defense, CPR/first-aid, and online safety awareness.</span></a></li>
+            <li class="dropdown-all"><a href="index.html#tracks">See all seven tracks &rarr;</a></li>
+          </ul>
+        </li>
+        <li><a href="journey.html">Journey</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="signup.html">Sign Up</a>
+    </nav>
   </div>
+</header>
 
   <a href="index.html" class="back">← Back to all tracks</a>
 
@@ -101,5 +123,6 @@
     <a class="btn secondary" href="index.html">Explore Other Tracks</a>
   </div>
 
+<script src="nav.js"></script>
 </body>
 </html>

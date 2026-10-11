@@ -7,37 +7,58 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     .gform-wrap{max-width:760px;margin:0 auto;padding:28px 20px 60px;}
-    .gform-topbar{height:10px;border-radius:8px 8px 0 0;background:linear-gradient(90deg,#7c3aed,#e8407a,#f97316);}
-    .gform-header{background:#fff;border:1px solid #e3ddf2;border-top:none;border-radius:0 0 8px 8px;padding:26px 28px;margin-bottom:24px;box-shadow:0 2px 8px rgba(30,20,80,0.06);}
-    .gform-header h1{margin:0 0 10px;font-size:32px;color:#1a0a5e;}
+    .gform-topbar{height:10px;border-radius:8px 8px 0 0;background:linear-gradient(90deg,#13294b,#c08a2e);}
+    .gform-header{background:#fff;border:1px solid #e7e2d9;border-top:none;border-radius:0 0 8px 8px;padding:26px 28px;margin-bottom:24px;box-shadow:0 2px 8px rgba(19,41,75,0.06);}
+    .gform-header h1{margin:0 0 10px;font-size:32px;color:#13294b;}
     .gform-header p{margin:0;color:#5a5570;font-size:14px;line-height:1.6;}
     .gform-required-note{margin-top:14px;font-size:12px;color:#c0392b;}
-    .gform-card{background:#fff;border:1px solid #e3ddf2;border-radius:8px;padding:22px 24px;margin-bottom:18px;box-shadow:0 2px 8px rgba(30,20,80,0.05);}
+    .gform-card{background:#fff;border:1px solid #e7e2d9;border-radius:8px;padding:22px 24px;margin-bottom:18px;box-shadow:0 2px 8px rgba(19,41,75,0.05);}
     .gform-q{font-size:15px;font-weight:600;color:#202124;margin-bottom:14px;}
     .gform-q .req{color:#c0392b;margin-left:3px;}
     .gform-input{width:100%;padding:8px 4px;border:none;border-bottom:1px solid #d8d3e8;font-size:14px;font-family:inherit;background:transparent;}
-    .gform-input:focus{outline:none;border-bottom:2px solid #7c3aed;}
+    .gform-input:focus{outline:none;border-bottom:2px solid #c08a2e;}
     .gform-option{display:flex;align-items:center;gap:10px;padding:6px 0;font-size:14px;color:#3c3c4a;}
-    .gform-option input{width:16px;height:16px;accent-color:#7c3aed;}
+    .gform-option input{width:16px;height:16px;accent-color:#c08a2e;}
     .gform-select{width:100%;padding:8px 4px;border:none;border-bottom:1px solid #d8d3e8;font-size:14px;background:transparent;font-family:inherit;}
-    .gform-select:focus{outline:none;border-bottom:2px solid #7c3aed;}
+    .gform-select:focus{outline:none;border-bottom:2px solid #c08a2e;}
     .gform-textarea{width:100%;min-height:80px;border:none;border-bottom:1px solid #d8d3e8;font-size:14px;font-family:inherit;background:transparent;resize:vertical;padding:8px 4px;}
-    .gform-textarea:focus{outline:none;border-bottom:2px solid #7c3aed;}
+    .gform-textarea:focus{outline:none;border-bottom:2px solid #c08a2e;}
     .gform-submit-row{display:flex;align-items:center;justify-content:space-between;margin-top:8px;}
     .gform-placeholder-note{background:#fff8e6;border:1px solid #f0dca0;color:#8a6d1a;border-radius:8px;padding:12px 16px;font-size:13px;margin-bottom:20px;}
   </style>
 </head>
 <body>
-  <div class="topnav">
-    <div class="brand">The 360° Youth Leader</div>
-    <div class="nav-links">
-      <a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link" href="about.html">About</a>
-      <a class="nav-link" href="journey.html">Journey</a>
-      <a class="nav-link" href="contact.html">Contact</a>
-      <a class="nav-link" href="signup.html">Sign Up</a>
-    </div>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="logo" href="index.html" aria-label="The 360° Youth Leader home">
+      <span class="logo-mark" aria-hidden="true">360°</span>
+      <span class="logo-text">The 360° Youth Leader<small>Leadership Initiative</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu">Menu</button>
+    <nav id="site-menu" class="nav-menu" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <button class="dropdown-toggle" aria-expanded="false" aria-controls="tracks-menu">Tracks <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <ul id="tracks-menu" class="dropdown">
+            <li><a href="lead.html"><strong>Leadership</strong><span>Decision-making, calm under pressure, leading self & others.</span></a></li>
+            <li><a href="mind.html"><strong>Mastery of Mind, Body & Soul</strong><span>Stress management, meditation, steady judgment and resilience.</span></a></li>
+            <li><a href="future.html"><strong>Future Pathways</strong><span>College/career planning, internships, scholarships and exploration.</span></a></li>
+            <li><a href="voice.html"><strong>Voice, Brand & Influence</strong><span>Public speaking, storytelling, personal brand and persuasion.</span></a></li>
+            <li><a href="money.html"><strong>Money Smarts</strong><span>Personal finance, earning, saving, investing and entrepreneurship.</span></a></li>
+            <li><a href="community.html"><strong>Community & Character</strong><span>Service, civic sense, character formation and good company.</span></a></li>
+            <li><a href="safety.html"><strong>Safety & Self Defense</strong><span>Self-defense, CPR/first-aid, and online safety awareness.</span></a></li>
+            <li class="dropdown-all"><a href="index.html#tracks">See all seven tracks &rarr;</a></li>
+          </ul>
+        </li>
+        <li><a href="journey.html">Journey</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="signup.html">Sign Up</a>
+    </nav>
   </div>
+</header>
 
   <div class="gform-wrap">
     <a class="back" href="index.html">← Back to home</a>
@@ -131,5 +152,6 @@
   <footer>
     <p>© 2026 <strong>360 Degree Youth Leadership Initiative</strong>.</p>
   </footer>
+<script src="nav.js"></script>
 </body>
 </html>
